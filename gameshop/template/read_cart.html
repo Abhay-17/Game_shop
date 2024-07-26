@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> cart</h1>
+    <table align="center" border="1">
+        <tr>
+            <th>Name</th>
+            <th>image</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th> Remove</th>
+            <th> Order </th>
+            
+
+        </tr>
+
+        {% for x in data %}
+
+        <tr>
+            <td> {{ x.product.name}} </td>
+            <td> <img src="{{ x.product.image.url}}" height="80" width="80">  </td>
+            <td> {{ x.quantity}} </td>
+            <td> {{ x.total_price}} </td>
+            <td> <a href="delete_cart/{{x.id}}" > Remove from cart</a> </td>
+            <td> <a href="order_cart/{{x.id}} "> Order </a>          </td>
+
+        </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>

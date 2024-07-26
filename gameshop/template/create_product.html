@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center"> Create Product</h1>
+    <table align="center" border="1">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <tr>
+                <th> NAME
+                </th>
+                <th> <input type="text" name="name" > </th>
+            </tr>
+            <tr>
+                <th> DESCRIPTION
+                </th>
+                <th> <textarea name="description"> </textarea> </th>
+            </tr>
+            <tr>
+                <th> Developer
+                </th>
+                <th> <input type="text" name="developer" > </th>
+            </tr>
+            <tr>
+                <th> Category
+                </th>
+                <td>
+                    <select name="category">
+
+                        <option value="Fighting">Fighting</option>
+                        <option value="Action">Action</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Battle Royale">Battle Royale</option>
+                        <option value = 'Role Playing'>Role Playing</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th> PRICE
+                </th>
+                <th> <input type="number" name="price" > </th>
+            </tr>
+            <tr>
+                <th> IMAGE
+                </th>
+                <th> <input type="file" name="image"> </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="submit">
+                </th>
+            </tr>
+
+        </form>
+
+    </table>
+</body>
+</html>
